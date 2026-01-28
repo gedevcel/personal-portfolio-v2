@@ -7,7 +7,7 @@ export default function Socials() {
     <>
       <div className="hidden md:flex flex-col gap-4 items-center fixed left-4 top-1/2 -translate-y-1/2">
         <div className="w-0.5 h-16 bg-white rounded-full"></div>
-        <SocialButton href="https://github.com/umigam3">
+        <SocialButton href="https://github.com/gedevcel">
           <GitHub className="w-5 h-5" />
         </SocialButton>
         <SocialButton href="https://www.linkedin.com/in/gerarddoncel/">

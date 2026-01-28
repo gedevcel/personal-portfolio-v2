@@ -21,7 +21,7 @@ export const projectsData = [
     ],
     buttons: [
       {
-        href: "https://github.com/umigam3/pokedex-api",
+        href: "https://github.com/gedevcel/pokedex-api",
         label: "Source Code",
         Icon: Source,
       },
@@ -43,7 +43,7 @@ export const projectsData = [
     ],
     buttons: [
       {
-        href: "https://github.com/umigam3/unix-system-scripts",
+        href: "https://github.com/gedevcel/unix-system-scripts",
         label: "Source Code",
         Icon: Source,
       },

@@ -4,7 +4,7 @@ export default function Footer() {
       <span className="text-center text-sm text-gray-400 dark:text-gray-500 py-1">
         Loosely designed in Figma and built with Next.js and Tailwind CSS -
         Follow me on{" "}
-        <a className="text-white" href="https://github.com/umigam3">
+        <a className="text-white" href="https://github.com/gedevcel">
           GitHub 👨‍💻
         </a>{" "}
       </span>
