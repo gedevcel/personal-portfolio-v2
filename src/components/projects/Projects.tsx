@@ -21,7 +21,7 @@ export default function Projects() {
               skills={
                 <>
                   {skills.map(({ color, skill, Icon }) => (
-                    <Badge key={skill} color="bg-green-500/30" skill={skill}>
+                    <Badge key={skill} color={color} skill={skill}>
                       <Icon className="w-4 h-4" />
                     </Badge>
                   ))}
