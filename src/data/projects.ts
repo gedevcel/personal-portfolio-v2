@@ -58,7 +58,7 @@ export const projectsData = [
     description:
       "A platform to explore, find and follow your favourite Telegram channels in one place.",
     skills: [
-      { color: "bg-transparent-500/30", skill: "NextJS", Icon: NextJS },
+      { color: "bg-slate-500/30", skill: "NextJS", Icon: NextJS },
       { color: "bg-blue-500/30", skill: "TypeScript", Icon: TypeScript },
       { color: "bg-green-500/30", skill: "Supabase", Icon: Supabase },
     ],
