@@ -60,7 +60,7 @@ export const projectsData = [
     skills: [
       { color: "bg-slate-500/30", skill: "NextJS", Icon: NextJS },
       { color: "bg-blue-500/30", skill: "TypeScript", Icon: TypeScript },
-      { color: "bg-green-500/30", skill: "Supabase", Icon: Supabase },
+      { color: "bg-cyan-500/30", skill: "Supabase", Icon: Supabase },
     ],
     buttons: [
       {
