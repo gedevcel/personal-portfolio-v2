@@ -11,10 +11,10 @@ export default function About() {
         <p className="mb-4">
           Computer Engineer with more than{" "}
           <span className="text-primary font-semibold">
-            2 years of experience using PHP
+            {new Date().getFullYear() - 2023} years of experience using PHP
           </span>
-          . Worked mainly with Laravel, Livewire, Alpine, JavaScript and SQL.
-          Additionally, I have gained proficiency in Angular and TypeScript.
+          . Worked mainly with Laravel, JavaScript and SQL. Additionally, I have
+          gained proficiency in React and TypeScript.
         </p>
         <p className="mb-4">
           My interest in technology started at the age of 15 when I got a
