@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 import "@fontsource-variable/onest";
 import "@fontsource-variable/roboto-condensed";
@@ -48,6 +49,7 @@ export default function RootLayout({
           {children}
           <BackToTopButton />
         </SmoothScrolling>
+        <Analytics />
       </body>
     </html>
   );
