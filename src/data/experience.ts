@@ -29,7 +29,7 @@ export type ExperienceItem = {
 const experienceData: ExperienceItem[] = [
   {
     date: "Oct 2024 - Oct 2025",
-    position: "Backend Developer",
+    position: "Software Developer",
     company: "eAgora",
     description:
       "Working with a development team to enhance the main platform, including integrating and refining APIs and endpoints, while also managing a dashboard that allows for a variety of actions.",
@@ -45,7 +45,7 @@ const experienceData: ExperienceItem[] = [
   },
   {
     date: "Jan 2023 - Oct 2024",
-    position: "Web Developer",
+    position: "Software Developer",
     company: "3&Punt",
     description:
       "Developing quality Moodle plugins and integrations. Utilizing technologies to enhance the Moodle e-learning experience. Collaborating with clients, I analyze requirements to craft optimal solutions and ensure smooth integration.",
@@ -59,7 +59,7 @@ const experienceData: ExperienceItem[] = [
   },
   {
     date: "Apr 2022 - Sep 2022",
-    position: "Full Stack Developer",
+    position: "Software Developer",
     company: "Namastech",
     description:
       "Fixing general bugs of their web application. (4DMOVIN) Development of small tools to imporve web utility. Building WordPress sites, including landing pages, working with woo-commerce.",

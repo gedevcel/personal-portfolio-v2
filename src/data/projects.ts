@@ -6,6 +6,9 @@ import {
   Preview,
   Bash,
   Linux,
+  TypeScript,
+  NextJS,
+  Supabase,
 } from "@/components/icons";
 
 export const projectsData = [
@@ -46,6 +49,24 @@ export const projectsData = [
         href: "https://github.com/gedevcel/unix-system-scripts",
         label: "Source Code",
         Icon: Source,
+      },
+    ],
+  },
+  {
+    title: "Gramioo",
+    source: "/gramioo.png",
+    description:
+      "A platform to explore, find and follow your favourite Telegram channels in one place.",
+    skills: [
+      { color: "bg-transparent-500/30", skill: "NextJS", Icon: NextJS },
+      { color: "bg-blue-500/30", skill: "TypeScript", Icon: TypeScript },
+      { color: "bg-green-500/30", skill: "Supabase", Icon: Supabase },
+    ],
+    buttons: [
+      {
+        href: "https://gramioo.com/",
+        label: "Preview",
+        Icon: Preview,
       },
     ],
   },

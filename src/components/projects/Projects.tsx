@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <Section id="projects">
       <SectionTitle label="Projects" />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-10">
         {projectsData.map(
           ({ title, source, description, skills, buttons }, idx) => (
             <ProjectCard
@@ -37,7 +37,7 @@ export default function Projects() {
                 </>
               }
             />
-          )
+          ),
         )}
       </div>
     </Section>
