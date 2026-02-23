@@ -35,30 +35,30 @@ export default function Contact() {
           viewport={{ once: true }}
         >
           <span className="font-semibold uppercase opacity-50">Email</span>
-          <div className="flex gap-4 items-center mb-3 md:mb-6">
+          <div className="flex flex-wrap sm:flex-nowrap gap-x-4 gap-y-2 items-center mb-3 md:mb-6 overflow-hidden">
             <a
               href={`mailto:${email}`}
               target="_blank"
-              className="text-xl sm:text-3xl md:text-4xl lg:text-4xl font-bold lg:hover:text-primary duration-200"
+              className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-4xl font-bold lg:hover:text-primary duration-200 break-all sm:break-normal max-w-full"
             >
               {email}
             </a>
             <button
               onClick={handleCopy}
               aria-label="Copiar correo electrónico"
-              className="relative flex items-center gap-1 lg:hover:text-primary transition-colors duration-200"
+              className="relative flex items-center gap-1 lg:hover:text-primary transition-colors duration-200 shrink-0"
             >
-              <Copy size={24} />
+              <Copy size={24} className="w-5 h-5 sm:w-6 sm:h-6" />
 
               <AnimatePresence>
                 {copied && (
                   <motion.span
                     key="tooltip"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute -top-9 md:-top-12 left-1/2 -translate-x-1/2 text-sm md:text-lg bg-black text-white px-2 py-1 rounded-md shadow-md whitespace-nowrap z-10"
+                    className="absolute -top-10 left-1/2 -translate-x-1/2 text-xs sm:text-lg bg-black text-white px-2 py-1 rounded-md shadow-lg whitespace-nowrap z-10 border border-white/10"
                   >
                     Copied!
                   </motion.span>
