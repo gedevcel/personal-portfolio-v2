@@ -68,7 +68,7 @@ export default function Header() {
             </a>
           </div>
 
-          <button
+          {/* <button
             className="md:hidden z-[70] text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -77,7 +77,7 @@ export default function Header() {
             ) : (
               <Hamburger className="w-8 h-8" />
             )}
-          </button>
+          </button> */}
 
           {!isOpen && (
             <motion.div
