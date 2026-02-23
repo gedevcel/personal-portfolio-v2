@@ -13,9 +13,23 @@ export default function Header() {
   const { scrollYProgress } = useScroll();
   const { lenis, scrollToTop, scrollToBottom, scrollToId } = useSmoothScroll();
 
+  useEffect(() => {
+    if (lenis) {
+      if (isOpen) {
+        lenis.stop();
+        document.body.style.overflow = "hidden";
+      } else {
+        lenis.start();
+        document.body.style.overflow = "unset";
+      }
+    }
+  }, [isOpen, lenis]);
+
   return (
     <>
-      <header className="sticky top-0 h-20 backdrop-blur-xl z-10">
+      <header
+        className={`sticky top-0 h-20 backdrop-blur-xl ${isOpen ? "z-[60]" : "z-10"}`}
+      >
         <div className="flex h-full px-5 md:px-[5.5rem] justify-between items-center">
           <a href="#">
             <img
@@ -54,14 +68,23 @@ export default function Header() {
             </a>
           </div>
 
-          <a className="md:hidden z-50" onClick={() => setIsOpen(!isOpen)}>
-            <Hamburger className="w-8 h-8" />
-          </a>
+          <button
+            className="md:hidden z-[70] text-white"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? (
+              <Cross className="w-8 h-8" />
+            ) : (
+              <Hamburger className="w-8 h-8" />
+            )}
+          </button>
 
-          <motion.div
-            className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] transform-gpu"
-            style={{ scaleX: scrollYProgress, originX: 0 }}
-          />
+          {!isOpen && (
+            <motion.div
+              className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] transform-gpu"
+              style={{ scaleX: scrollYProgress, originX: 0 }}
+            />
+          )}
         </div>
       </header>
       <AnimatePresence>
@@ -79,61 +102,83 @@ export default function Header() {
             />
             <motion.div
               key="mobile-menu"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
-              className="fixed top-24 right-5 w-3/5 max-w-xs flex flex-col items-start justify-between bg-black/10 p-4 md:hidden backdrop-blur-xl rounded-2xl bg-clip-padding backdrop-filter bg-opacity-10 border border-gray-500 z-40"
+              initial={{ y: "-100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-100%" }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="fixed inset-0 w-full h-screen bg-[#1c1c1c] flex flex-col items-center justify-between p-8 pt-28 md:hidden z-50"
             >
-              <div className="flex flex-col w-full">
-                <a
-                  className="text-white text-lg cursor-pointer"
+              {/* Top Branding */}
+              <div className="flex flex-col items-center gap-1 group">
+                <h2 className="text-6xl font-semibold leading-none text-white opacity-90 group-hover:opacity-100 transition-opacity mt-8">
+                  Software
+                </h2>
+                <h3 className="text-5xl font-medium leading-none bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] inline-block text-transparent bg-clip-text">
+                  Developer.
+                </h3>
+              </div>
+
+              {/* Center Menu */}
+              <div className="flex flex-col items-center gap-10 w-full max-w-xs">
+                <div className="flex flex-col items-center w-full group">
+                  <a
+                    className="text-white text-3xl font-medium cursor-pointer transition-all duration-300 group-hover:scale-110"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setTimeout(() => {
+                        scrollToId("experience");
+                      }, 1);
+                    }}
+                  >
+                    Experience
+                  </a>
+                  <div className="h-0.5 bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] w-0 group-hover:w-full transition-all duration-300 mt-2"></div>
+                </div>
+
+                <div className="flex flex-col items-center w-full group">
+                  <a
+                    className="text-white text-3xl font-medium cursor-pointer transition-all duration-300 group-hover:scale-110"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setTimeout(() => {
+                        scrollToId("aboutme");
+                      }, 1);
+                    }}
+                  >
+                    About
+                  </a>
+                  <div className="h-0.5 bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] w-0 group-hover:w-full transition-all duration-300 mt-2"></div>
+                </div>
+
+                <div className="flex flex-col items-center w-full group">
+                  <a
+                    className="text-white text-3xl font-medium cursor-pointer transition-all duration-300 group-hover:scale-110"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setTimeout(() => {
+                        scrollToId("projects");
+                      }, 1);
+                    }}
+                  >
+                    Projects
+                  </a>
+                  <div className="h-0.5 bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] w-0 group-hover:w-full transition-all duration-300 mt-2"></div>
+                </div>
+              </div>
+
+              {/* Bottom Button */}
+              <div className="w-full max-w-sm pb-10">
+                <button
+                  className="w-full bg-primary text-white py-5 rounded-2xl text-xl font-bold shadow-2xl active:scale-95 transition-all duration-300 hover:brightness-110"
                   onClick={() => {
                     setIsOpen(false);
                     setTimeout(() => {
-                      scrollToId("aboutme");
+                      scrollToBottom();
                     }, 1);
                   }}
                 >
-                  About me
-                </a>
-                <div className="h-px bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] w-full mb-3"></div>
-                <a
-                  className="text-white text-lg cursor-pointer"
-                  onClick={() => {
-                    setIsOpen(false);
-                    setTimeout(() => {
-                      scrollToId("experience");
-                    }, 1);
-                  }}
-                >
-                  Experience
-                </a>
-                <div className="h-px bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] w-full mb-3"></div>
-                <a
-                  className="text-white text-lg cursor-pointer"
-                  onClick={() => {
-                    setIsOpen(false);
-                    setTimeout(() => {
-                      scrollToId("projects");
-                    }, 1);
-                  }}
-                >
-                  Projects
-                </a>
-                <div className="h-px bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] w-full mb-3"></div>
-                <a
-                  className="text-white text-lg cursor-pointer"
-                  onClick={() => {
-                    setIsOpen(false);
-                    setTimeout(() => {
-                      scrollToId("contact");
-                    }, 1);
-                  }}
-                >
-                  Contact
-                </a>
-                <div className="h-px bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] w-full mb-3"></div>
+                  Get in touch
+                </button>
               </div>
             </motion.div>
           </>
