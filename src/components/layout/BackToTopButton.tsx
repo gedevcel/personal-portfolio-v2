@@ -27,7 +27,7 @@ export default function BackToTopButton() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 flex gap-x-2 items-center justify-center rounded-xl p-3 text-white
+          className="fixed bottom-6 right-6 flex gap-x-2 items-center justify-center rounded p-3 text-white
                      bg-primary cursor-pointer"
         >
           <Chevron className="w-6 h-6" />

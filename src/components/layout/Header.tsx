@@ -62,7 +62,7 @@ export default function Header() {
             </nav>
             <a
               onClick={() => scrollToBottom()}
-              className="bg-primary text-white px-6 py-2 rounded-xl cursor-pointer"
+              className="bg-primary text-white px-6 py-2 rounded cursor-pointer"
             >
               Get in touch
             </a>
@@ -169,7 +169,7 @@ export default function Header() {
               {/* Bottom Button */}
               <div className="w-full max-w-sm pb-10">
                 <button
-                  className="w-full bg-primary text-white py-5 rounded-2xl text-xl font-bold shadow-2xl active:scale-95 transition-all duration-300 hover:brightness-110"
+                  className="w-full bg-primary text-white py-5 rounded text-xl font-bold shadow-2xl active:scale-95 transition-all duration-300 hover:brightness-110"
                   onClick={() => {
                     setIsOpen(false);
                     setTimeout(() => {

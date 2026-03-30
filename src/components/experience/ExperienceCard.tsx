@@ -17,7 +17,7 @@ export default function ExperienceCard({
 }) {
   return (
     <div className="relative w-full pb-6">
-      <div className="hidden lg:block absolute ml-2 lg:ml-0 bg-[#F47B2A] w-4 h-4 rounded-full top-4 left-0 lg:left-1/2 transform -translate-x-1/2 mt-1.5"></div>
+      <div className="hidden lg:block absolute ml-2 lg:ml-0 bg-[#F47B2A] w-4 h-4 rounded top-4 left-0 lg:left-1/2 transform -translate-x-1/2 mt-1.5"></div>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{
@@ -27,7 +27,7 @@ export default function ExperienceCard({
           type: "ease",
         }}
         viewport={{ once: true }}
-        className={`relative lg:ml-0 bg-black/20 py-4 lg:rounded-none rounded-bl-xl rounded-tl-xl
+        className={`relative lg:ml-0 bg-black/20 py-4 lg:rounded-none rounded
             ${
               side == "right"
                 ? "lg:left-[52.5%] lg:w-[47.5%] border-r-violet-500/50 border-r-[1px]"

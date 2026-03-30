@@ -17,7 +17,7 @@ export default function ProjectCard({
 }) {
   return (
     <motion.div
-      className="flex flex-col mb-8 w-full bg-black/20 rounded-lg"
+      className="flex flex-col mb-8 w-full bg-black/20 rounded"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{
         opacity: 1,
@@ -27,7 +27,7 @@ export default function ProjectCard({
       }}
       viewport={{ once: true }}
     >
-      <div className="project-image w-full overflow-hidden rounded-t-lg">
+      <div className="project-image w-full overflow-hidden rounded">
         <img
           className="w-full aspect-video object-contain hover:animate-zoomIn"
           loading="lazy"

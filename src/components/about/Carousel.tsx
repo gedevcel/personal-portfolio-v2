@@ -13,7 +13,7 @@ import {
 
 export default function Carousel() {
   return (
-    <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+    <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] py-3">
       <ul className="flex items-center justify-center md:justify-start [&_li]:mx-5 sm:[&_li]:mx-8 animate-infinite-scroll">
         <li>
           <PhpCarousel size={80} />
