@@ -30,7 +30,7 @@ export default function Header() {
       <header
         className={`sticky top-0 h-20 backdrop-blur-xl ${isOpen ? "z-[60]" : "z-10"}`}
       >
-        <div className="flex h-full px-5 md:px-[5.5rem] justify-between items-center max-w-[1520px] mx-auto">
+        <div className="flex h-full px-5 justify-between items-center max-w-[1520px] mx-auto">
           <a href="#">
             <img
               onClick={scrollToTop}

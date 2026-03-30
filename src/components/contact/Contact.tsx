@@ -19,7 +19,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full max-w-[1520px] mx-auto px-5 md:px-[5.5rem] h-[calc(100dvh-115px)] relative"
+      className="w-full max-w-[1520px] mx-auto px-5 h-[calc(100dvh-115px)] relative"
     >
       <SectionTitle label="Contact" />
       <div className="flex flex-col gap-4 md:gap-10">
