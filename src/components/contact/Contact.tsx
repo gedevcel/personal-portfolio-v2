@@ -58,7 +58,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute -top-10 left-1/2 -translate-x-1/2 text-xs sm:text-lg bg-black text-white px-2 py-1 rounded shadow-lg whitespace-nowrap z-10 border border-white/10"
+                    className="absolute -top-1.5 left-8 -translate-x-1/2 text-xs sm:text-lg bg-black text-white px-2 py-1 rounded shadow-lg whitespace-nowrap z-50 border border-white/10"
                   >
                     Copied!
                   </motion.span>

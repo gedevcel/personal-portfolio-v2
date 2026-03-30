@@ -8,7 +8,7 @@ export default {
   ],
   safelist: [
     {
-      pattern: /bg-(red|pink|cyan|yellow|sky|slate|amber|indigo|blue)-500\/30/,
+      pattern: /bg-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-500\/30/,
     },
   ],
   theme: {

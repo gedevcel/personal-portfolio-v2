@@ -56,17 +56,40 @@ export const projectsData = [
     title: "Gramioo",
     source: "/gramioo.png",
     description:
-      "A platform to explore, find and follow your favourite Telegram channels in one place.",
+      "A platform to explore, find and follow your favourite Telegram channels in one place, discover new content, and keep everything organized easily.",
     skills: [
       { color: "bg-slate-500/30", skill: "NextJS", Icon: NextJS },
       { color: "bg-blue-500/30", skill: "TypeScript", Icon: TypeScript },
-      { color: "bg-cyan-500/30", skill: "Supabase", Icon: Supabase },
+      { color: "bg-green-500/30", skill: "Supabase", Icon: Supabase },
     ],
     buttons: [
       {
         href: "https://gramioo.com/",
         label: "Preview",
         Icon: Preview,
+      },
+    ],
+  },
+  {
+    title: "Kindle Cover Formatter",
+    source: "/kindle-cover-formatter.png",
+    description:
+      "A tool to resize, edit and format book cover images to fit perfectly on your E-Reader device.",
+    skills: [
+      { color: "bg-blue-500/30", skill: "React", Icon: ReactIcon },
+      { color: "bg-blue-500/30", skill: "TypeScript", Icon: TypeScript },
+      { color: "bg-pink-500/30", skill: "Vite", Icon: Vite },
+    ],
+    buttons: [
+      {
+        href: "https://kindle-cover-formatter.gerarddoncel.dev/",
+        label: "Preview",
+        Icon: Preview,
+      },
+      {
+        href: "https://github.com/gedevcel/kindle-cover-formatter",
+        label: "Source Code",
+        Icon: Source,
       },
     ],
   },
