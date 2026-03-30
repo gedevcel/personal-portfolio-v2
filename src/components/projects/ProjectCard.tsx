@@ -38,7 +38,16 @@ export default function ProjectCard({
       <div className="flex flex-col justify-between w-full p-6">
         <div className="flex flex-col">
           <h2 className="opacity-85 text-2xl font-semibold mb-3">{title}</h2>
-          <div className="flex flex-wrap mb-2">{skills}</div>
+          <div
+            className={`no-scrollbar flex flex-nowrap overflow-x-auto scroll-smooth
+            justify-start lg:flex-wrap mb-2`}
+            style={{
+              maskImage:
+                "linear-gradient(to right, transparent 0, black 0px, black calc(100% - 15px), transparent 100%)",
+            }}
+          >
+            {skills}
+          </div>
           <p className="text-base mb-4 text-gray-400 dark:text-gray-400">
             {description}
           </p>
