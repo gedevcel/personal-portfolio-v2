@@ -1,8 +1,7 @@
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
-import SocialsMobile from "@/components/hero/SocialsMobile";
 import { Clock } from "@/components/hero/Clock";
-import SocialsDesktop from "../layout/SocialsDesktop";
+import Socials from "@/components/hero/Socials";
 
 export default function Hero() {
   const now = new Date();
@@ -23,7 +22,7 @@ export default function Hero() {
       </div>
       <div className="flex flex-col md:flex-row justify-between md:items-end md:h-auto h-full">
         <div>
-          <div className="flex flex-col gap-4 md:gap-6 md:w-[340px] lg:w-[400px] mb-8 md:mb-0">
+          <div className="flex flex-col gap-4 md:gap-6 md:w-[340px] lg:w-[400px] mb-6">
             <p className="text-lg">
               With over {now.getFullYear() - 2023} years of experience crafting
               web applications with PHP, I’m dedicated to building{" "}
@@ -32,7 +31,6 @@ export default function Hero() {
               </span>{" "}
               and efficient solutions.
             </p>
-            <SocialsDesktop />
             <a
               onClick={() => scrollToId("aboutme")}
               className="flex gap-3 items-center group w-fit cursor-pointer"
@@ -55,7 +53,7 @@ export default function Hero() {
               </svg>
             </a>
           </div>
-          <SocialsMobile />
+          <Socials />
         </div>
         <div className="flex flex-col items-end justify-end gap-2">
           <span className="opacity-50 font-semibold text-xl">LOCAL TIME</span>
