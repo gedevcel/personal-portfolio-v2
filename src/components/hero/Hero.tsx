@@ -2,6 +2,7 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 import SocialsMobile from "@/components/hero/SocialsMobile";
 import { Clock } from "@/components/hero/Clock";
+import SocialsDesktop from "../layout/SocialsDesktop";
 
 export default function Hero() {
   const now = new Date();
@@ -10,13 +11,13 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="h-[calc(100svh-96px)] px-5 py-4 md:px-[5.5rem] mb-16 md:mb-24 flex flex-col gap-6 md:gap-0 md:justify-between"
+      className="max-w-[1520px] mx-auto h-[calc(100svh-96px)] px-5 py-4 md:px-[5.5rem] mb-16 md:mb-24 flex flex-col gap-6 md:gap-0 md:justify-between"
     >
-      <div className="flex flex-col items-start md:items-center md:justify-center md:h-[80%]">
+      <div className="flex flex-col items-start md:items-left md:justify-end md:h-[80%] md:py-4">
         <h1 className="text-6xl sm:text-[96px] lg:text-[142px] font-semibold leading-none whitespace-nowrap">
           Software
         </h1>
-        <h2 className="text-4xl sm:text-[68px] lg:text-[112px] font-medium leading-none bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] inline-block text-transparent bg-clip-text">
+        <h2 className="text-4xl sm:text-[68px] lg:text-[112px] font-semibold leading-none bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] inline-block text-transparent bg-clip-text">
           Developer.
         </h2>
       </div>
@@ -31,6 +32,7 @@ export default function Hero() {
               </span>{" "}
               and efficient solutions.
             </p>
+            <SocialsDesktop />
             <a
               onClick={() => scrollToId("aboutme")}
               className="flex gap-3 items-center group w-fit cursor-pointer"

@@ -44,7 +44,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body>
         <SmoothScrolling>
-          <SocialsDesktop />
           <Background />
           <Header />
           {children}
