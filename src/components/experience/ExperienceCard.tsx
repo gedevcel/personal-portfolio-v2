@@ -17,7 +17,7 @@ export default function ExperienceCard({
 }) {
   return (
     <div className="relative w-full pb-6">
-      <div className="hidden lg:block absolute ml-2 lg:ml-0 bg-[#F47B2A] w-4 h-4 rounded top-4 left-0 lg:left-1/2 transform -translate-x-1/2 mt-1.5"></div>
+      <div className="hidden lg:block absolute ml-2 lg:ml-0 bg-gradient-to-b from-[#FFC76B] to-[#F47B2A] bg-fixed w-4 h-4 rounded top-4 left-0 lg:left-1/2 transform -translate-x-1/2 mt-1.5"></div>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{

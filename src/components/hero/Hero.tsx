@@ -13,16 +13,16 @@ export default function Hero() {
       className="max-w-[1520px] mx-auto h-[calc(100svh-96px)] px-5 py-4 mb-16 md:mb-24 flex flex-col gap-6 md:gap-0 md:justify-between"
     >
       <div className="flex flex-col items-start md:items-left md:justify-end md:h-[80%] md:py-8 md:-ml-2">
-        <h1 className="text-6xl sm:text-[96px] md:text-[142px] font-semibold leading-none whitespace-nowrap">
+        <h1 className="text-6xl sm:text-[96px] md:text-[155px] font-bold leading-none whitespace-nowrap">
           Software
         </h1>
-        <h2 className="text-4xl sm:text-[68px] md:text-[96px] font-semibold leading-none bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] inline-block text-transparent bg-clip-text">
+        <h2 className="text-4xl sm:text-[68px] md:text-[110px] font-bold leading-none bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] inline-block text-transparent bg-clip-text">
           Developer.
         </h2>
       </div>
       <div className="flex flex-col md:flex-row justify-between md:items-end md:h-auto h-full">
         <div>
-          <div className="flex flex-col gap-4 md:gap-6 md:w-[340px] lg:w-[400px] mb-6">
+          <div className="flex flex-col gap-4 md:gap-6 md:w-[400px] mb-6">
             <p className="text-lg">
               With over {now.getFullYear() - 2023} years of experience crafting
               web applications with PHP, I’m dedicated to building{" "}
