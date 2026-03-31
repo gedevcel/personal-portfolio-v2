@@ -68,7 +68,7 @@ export default function Header() {
             </a>
           </div>
 
-          {/* <button
+          <button
             className="md:hidden z-[70] text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -77,7 +77,7 @@ export default function Header() {
             ) : (
               <Hamburger className="w-8 h-8" />
             )}
-          </button> */}
+          </button>
 
           {!isOpen && (
             <motion.div
@@ -102,42 +102,17 @@ export default function Header() {
             />
             <motion.div
               key="mobile-menu"
-              initial={{ y: "-100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-100%" }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-0 w-full h-screen bg-[#1c1c1c] flex flex-col items-center justify-between p-8 pt-28 md:hidden z-50"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="fixed inset-0 w-full h-screen bg-[#1c1c1c] backdrop-blur-xl flex flex-col items-center justify-center p-8 md:hidden z-50"
             >
-              {/* Top Branding */}
-              <div className="flex flex-col items-center gap-1 group">
-                <h2 className="text-6xl font-semibold leading-none text-white opacity-90 group-hover:opacity-100 transition-opacity mt-8">
-                  Software
-                </h2>
-                <h3 className="text-5xl font-medium leading-none bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] inline-block text-transparent bg-clip-text">
-                  Developer.
-                </h3>
-              </div>
-
               {/* Center Menu */}
               <div className="flex flex-col items-center gap-10 w-full max-w-xs">
-                <div className="flex flex-col items-center w-full group">
+                <div className="flex flex-col items-center w-full">
                   <a
-                    className="text-white text-3xl font-medium cursor-pointer transition-all duration-300 group-hover:scale-110"
-                    onClick={() => {
-                      setIsOpen(false);
-                      setTimeout(() => {
-                        scrollToId("experience");
-                      }, 1);
-                    }}
-                  >
-                    Experience
-                  </a>
-                  <div className="h-0.5 bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] w-0 group-hover:w-full transition-all duration-300 mt-2"></div>
-                </div>
-
-                <div className="flex flex-col items-center w-full group">
-                  <a
-                    className="text-white text-3xl font-medium cursor-pointer transition-all duration-300 group-hover:scale-110"
+                    className="text-white text-3xl font-medium cursor-pointer transition-all duration-300"
                     onClick={() => {
                       setIsOpen(false);
                       setTimeout(() => {
@@ -147,12 +122,25 @@ export default function Header() {
                   >
                     About
                   </a>
-                  <div className="h-0.5 bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] w-0 group-hover:w-full transition-all duration-300 mt-2"></div>
                 </div>
 
-                <div className="flex flex-col items-center w-full group">
+                <div className="flex flex-col items-center w-full">
                   <a
-                    className="text-white text-3xl font-medium cursor-pointer transition-all duration-300 group-hover:scale-110"
+                    className="text-white text-3xl font-medium cursor-pointer transition-all duration-300"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setTimeout(() => {
+                        scrollToId("experience");
+                      }, 1);
+                    }}
+                  >
+                    Experience
+                  </a>
+                </div>
+
+                <div className="flex flex-col items-center w-full">
+                  <a
+                    className="text-white text-3xl font-medium cursor-pointer transition-all duration-300"
                     onClick={() => {
                       setIsOpen(false);
                       setTimeout(() => {
@@ -162,23 +150,21 @@ export default function Header() {
                   >
                     Projects
                   </a>
-                  <div className="h-0.5 bg-gradient-to-r from-[#FFC76B] to-[#F47B2A] w-0 group-hover:w-full transition-all duration-300 mt-2"></div>
                 </div>
-              </div>
 
-              {/* Bottom Button */}
-              <div className="w-full max-w-sm pb-10">
-                <button
-                  className="w-full bg-primary text-black py-5 rounded text-xl font-bold shadow-2xl active:scale-95 transition-all duration-300 hover:shadow-[0_0_20px_#A587E6]"
-                  onClick={() => {
-                    setIsOpen(false);
-                    setTimeout(() => {
-                      scrollToBottom();
-                    }, 1);
-                  }}
-                >
-                  Get in touch
-                </button>
+                <div className="flex flex-col items-center w-full">
+                  <a
+                    className="text-white text-3xl font-medium cursor-pointer transition-all duration-300"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setTimeout(() => {
+                        scrollToId("contact");
+                      }, 1);
+                    }}
+                  >
+                    Contact
+                  </a>
+                </div>
               </div>
             </motion.div>
           </>
