@@ -63,7 +63,7 @@ export const projectsData = [
     skills: [
       { color: "bg-slate-500/30", skill: "NextJS", Icon: NextJS },
       { color: "bg-blue-500/30", skill: "TypeScript", Icon: TypeScript },
-      { color: "bg-cyan-500/30", skill: "Tailwind CSS", Icon: Tailwind },
+      { color: "bg-cyan-500/30", skill: "Tailwind", Icon: Tailwind },
       { color: "bg-green-500/30", skill: "Supabase", Icon: Supabase },
     ],
     buttons: [
@@ -81,7 +81,7 @@ export const projectsData = [
       "A tool to resize, edit and format book cover images to fit perfectly on your E-Reader device.",
     skills: [
       { color: "bg-blue-500/30", skill: "React", Icon: ReactIcon },
-      { color: "bg-cyan-500/30", skill: "Tailwind CSS", Icon: Tailwind },
+      { color: "bg-cyan-500/30", skill: "Tailwind", Icon: Tailwind },
       { color: "bg-blue-500/30", skill: "TypeScript", Icon: TypeScript },
       { color: "bg-pink-500/30", skill: "Vite", Icon: Vite },
     ],
